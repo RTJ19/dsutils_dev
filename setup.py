@@ -11,8 +11,12 @@ setup(
     zip_safe=False,
     install_requires=['pandas'
                       , 'numpy'
+                      , 'scikit-learn'
                       , 'scipy'
                       , 'matplotlib'
+                      , 'joblib'
+                      , 'pyspark_dist_explore'
+                      , 'scikit-plot'
                       # , 'spark_testing_base' # Only required for testing
                       # , 'findspark' # Only required for testing
                       ]
