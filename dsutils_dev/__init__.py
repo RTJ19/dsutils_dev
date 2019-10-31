@@ -1,1 +1,2 @@
-from .dsutils_dev import get_eda_plots
+from . import evaluate
+__version__ = '0.0.1'
