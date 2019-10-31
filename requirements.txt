@@ -1,0 +1,11 @@
+pandas>=0.20.1
+numpy>=1.12.1
+scikit-learn>=0.18
+scipy>=0.9
+matplotlib>=2.0.2
+joblib>=0.10
+spark_testing_base>=0.6.0
+findspark>=1.1.0
+pyspark>=2.2.2
+pyspark_dist_explore>=0.1.7
+scikit-plot>=0.3.7
