@@ -33,7 +33,7 @@ def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
   fig = plt.figure(figsize=numerical_figsize)
   fig.subplots_adjust(hspace=hspace, wspace=wspace)
   print ("Plotting numerical columns...")
-  for column,i in tqdm(zip(numerical_labels2,range(1, len(numerical_labels2)+1))):
+  for column,i in tqdm(zip(numerical_labels2,range(1, len(numerical_labels2)+1)),total = len(numerical_labels2)):
     
     ax = fig.add_subplot(round((len(numerical_labels2)/2)+0.5), 2, i)
     hist(ax, x=df.select(column), bins=bins)
@@ -56,7 +56,7 @@ def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
   # plt.xticks(rotation=45)
 
   print ("Plotting categorical columns...")
-  for column,i in tqdm(zip(categorical_labels2,range(1, len(categorical_labels2)+1))):
+  for column,i in tqdm(zip(categorical_labels2,range(1, len(categorical_labels2)+1))total = len(categorical_labels2)):
     
     window = Window.rowsBetween(Window.unboundedPreceding,Window.unboundedFollowing)
     tab = df.select([column]).\
