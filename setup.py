@@ -9,6 +9,7 @@ setup(
     author='Roshan T John',
     author_email='roshan.github@gmail.com',
     url = 'https://github.com/RTJ19/dsutils_dev.git',
+    download_url = 'https://github.com/RTJ19/dsutils_dev/archive/0.0.1.tar.gz'
     keywords = ['PYSPARK', 'EDA']
     zip_safe=False,
     install_requires=['pandas'
