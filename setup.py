@@ -17,6 +17,7 @@ setup(
                       , 'joblib'
                       , 'pyspark_dist_explore'
                       , 'scikit-plot'
+                      , 'tqdm'
                       # , 'spark_testing_base' # Only required for testing
                       # , 'findspark' # Only required for testing
                       ]
