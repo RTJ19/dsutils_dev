@@ -19,7 +19,7 @@ def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
 
   
   numerical_labels = [item[0] for item in df.dtypes if not item[1].startswith('string')]
-  print (numerical_labels)
+  # print (numerical_labels)
 
   if (len(numerical_labels) % 2) == 0:
     numerical_labels2=numerical_labels
@@ -41,7 +41,7 @@ def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
     ax.legend()
   
   categorical_labels = [item[0] for item in df.dtypes if item[1].startswith('string')]
-  print (categorical_labels)
+  # print (categorical_labels)
   
   if (len(categorical_labels) % 2) == 0:
     categorical_labels2=categorical_labels
