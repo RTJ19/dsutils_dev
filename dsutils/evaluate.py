@@ -28,11 +28,11 @@ def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
     numerical_labels2=numerical_labels
     numerical_labels2.append(numerical_labels[-1])
     
-    print("numerical columns has Odd number of features\n hence last subplot will be repeated")
+    print("Numerical columns has Odd number of features\n hence last subplot will be repeated")
 
   fig = plt.figure(figsize=numerical_figsize)
   fig.subplots_adjust(hspace=hspace, wspace=wspace)
-  print ("plotting numerical columns")
+  print ("Plotting numerical columns...")
   for column,i in tqdm(zip(numerical_labels2,range(1, len(numerical_labels2)+1))):
     
     ax = fig.add_subplot(round((len(numerical_labels2)/2)+0.5), 2, i)
@@ -49,13 +49,13 @@ def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
     categorical_labels2=categorical_labels
     categorical_labels2.append(categorical_labels[-1])
     
-    print("categorical labels has Odd number of features\n hence last subplot will be repeated")
+    print("Categorical labels has Odd number of features\n hence last subplot will be repeated")
 
   fig = plt.figure(figsize=(categorical_figsize))
   fig.subplots_adjust(hspace=hspace, wspace=wspace)
   # plt.xticks(rotation=45)
 
-  print ("plotting categorical columns")
+  print ("Plotting categorical columns...")
   for column,i in tqdm(zip(categorical_labels2,range(1, len(categorical_labels2)+1))):
     
     window = Window.rowsBetween(Window.unboundedPreceding,Window.unboundedFollowing)
