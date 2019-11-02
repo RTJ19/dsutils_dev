@@ -3,7 +3,7 @@ import pyspark.sql.functions   as F
 
 from pyspark.sql               import Window
 from pyspark_dist_explore      import hist
-from tqdm                      import tqdm
+from tqdm                      import tqdm_notebook as tqdm
 
 def get_eda_plots(df,hspace=0.5, wspace=0.5,numerical_figsize=(15,15),\
             categorical_figsize=(15,25),bins=25):
