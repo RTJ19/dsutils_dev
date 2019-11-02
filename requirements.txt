@@ -4,6 +4,7 @@ scikit-learn>=0.18
 scipy>=0.9
 matplotlib>=2.0.2
 joblib>=0.10
+tqdm>=4.37.0
 spark_testing_base>=0.6.0
 findspark>=1.1.0
 pyspark>=2.2.2
