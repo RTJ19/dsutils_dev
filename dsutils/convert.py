@@ -19,7 +19,7 @@ def define_structure(string, format_type):
     return StructField(string, typo)
 
 # Given pandas dataframe, it will return a spark's dataframe.
-def pandas_to_spark(pandas_df):
+def pandas_to_spark(spark_session, pandas_df):
     columns = list(pandas_df.columns)
     types = list(pandas_df.dtypes)
     struct_list = []
@@ -29,4 +29,4 @@ def pandas_to_spark(pandas_df):
       struct_list.append(define_structure(column, typo))
     p_schema = StructType(struct_list)
     #print (p_schema)
-    return spark.createDataFrame(pandas_df, p_schema)
+    return spark_session.createDataFrame(pandas_df, p_schema)
